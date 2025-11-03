@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit a Report — Krieger Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Keep all fields aligned and within the visual layer */
+    form {
+      font-family: "Special Elite", monospace;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    form label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: bold;
+      color: #d9cbb0;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="file"],
+    form textarea {
+      width: 96%; /* not full width, prevents overflow */
+      background: #121210;
+      color: #d9cbb0;
+      border: 1px solid #2b2b29;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+    form textarea {
+      resize: vertical;
+    }
+    form button {
+      background: #0047ff;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #0059ff;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo">Krieger Blog — Archival Interface</div>
+    <nav class="main-nav">
+      <a href="index.html">Index</a>
+      <a href="report.html">Reports</a>
+      <a href="aboutus.html">About</a>
+    </nav>
+    <div class="last-updated">Last Updated: 11/3/2025</div>
+  </div>
+</header>
+
+
+      </p>
+      <div class="sep"></div>
+
+      <form action="https://formspree.io/f/xqagvlyj" method="POST" enctype="multipart/form-data">
+        <label for="name">Name or Alias:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="_replyto" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Details / Description:</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Describe your report here..."></textarea>
+
+        <label for="attachments">Attach files (optional):</label>
+        <input type="file" id="attachments" name="attachments" multiple>
+
+        <input type="hidden" name="_next" value="thankyou.html">
+
+        <button type="submit">Submit Report</button>
+      </form>
+    </div>
+
+
+  </div>
+
+</body>
+</html>
